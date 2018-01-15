@@ -1,7 +1,16 @@
-source 'https://rubygems.org'
+markdown: kramdown
+highlighter: pygments
+permalink: /posts/:title.html
+excerpt_separator: "<!-- more -->"
 
-require 'json'
-require 'open-uri'
-versions = JSON.parse(open('https://pages.github.com/versions.json').read)
-
-gem 'github-pages', versions['github-pages']
+github: panxw
+author: "zhou"
+email: winfirm#163.com
+name: "个人博客"
+url: http://www.panxw.com
+domain: www.panxw.com
+all_categories: [
+["demo", "demo","/index.html"]
+]
+gems:
+ - jekyll-paginate
