@@ -1,0 +1,16 @@
+markdown: kramdown
+highlighter: pygments
+permalink: /posts/:title.html
+excerpt_separator: "<!-- more -->"
+
+github: panxw
+author: "zhou"
+email: winfirm#163.com
+name: "个人博客"
+url: http://www.panxw.com
+domain: www.panxw.com
+all_categories: [
+["demo", "demo","/index.html"]
+]
+gems:
+ - jekyll-paginate
