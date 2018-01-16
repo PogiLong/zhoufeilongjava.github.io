@@ -1,0 +1,10 @@
+---
+layout: post
+title: zhou
+permalink: /zhou/1.html
+---
+
+test
+{% highlight ruby %}
+"hello world"
+{% endhighlight %}
