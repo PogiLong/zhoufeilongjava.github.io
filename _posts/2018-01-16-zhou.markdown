@@ -1,10 +1,31 @@
 ---
 layout: post
-title: zhou
-permalink: /zhou/1.html
+title: github pages 搭建博客
+permalink: /zhou/2.html
 ---
 
 test
 {% highlight ruby %}
 "hello world"
 {% endhighlight %}
+### test
+### test
+### test
+### test
+### test
+### test
+### test
+### test
+### test
+### test
+### test
+### test
+### test
+### test
+### test
+### test
+### test
+### test
+### test
+### test
+### test
