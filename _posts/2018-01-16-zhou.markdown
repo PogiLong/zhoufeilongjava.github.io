@@ -1,6 +1,6 @@
 ---
 layout: post
-title: github pages 搭建博客
+title: github pages + jekyll 搭建博客
 permalink: /zhou/2.html
 ---
 
