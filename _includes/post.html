@@ -10,7 +10,13 @@
                     <h1 class="text-danger">
                         {{ page.title }}
                     </h1>
-                    {{ page.date | date: "%Y-%m-%d" }}
+                    发布时间:<span class="label label-success">{{ page.date | date: "%Y-%m-%d" }}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文章分类:<span class="label label-primary">
+                  {% if page.categories != '' %}
+                  {{page.categories}}
+                  {% else %}
+                  {{无}}
+                  {% endif %}
+                </span>
                 </div>
                 {{ page.content | markdownify }}
 

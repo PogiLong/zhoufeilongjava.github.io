@@ -12,4 +12,21 @@
             <span class="text-warning pull-right">{{ site.posts.size}}</span>
         </a>
     </li>
+    <li id="categories" title="categories">
+        <a href="{{site.url}}{{site.baseurl}}/index.html#archives">
+            <i class="fa fa-file-archive-o" aria-hidden="true"></i>
+            分类
+            <span class="text-warning pull-right">{{ site.categories.size}}</span>
+        </a>
+    </li>
+
+    {{% for categories in site.categories %}}
+    <li id="category">
+        <a href="{{site.url}}{{site.baseurl}}/index.html#archives">
+            <i class="fa fa-file-archive-o" aria-hidden="false"></i>
+            <span class="text-warning pull-right">{{categories}}</span>
+        </a>
+    </li>
+    {{endfor}}
+
 </ul>

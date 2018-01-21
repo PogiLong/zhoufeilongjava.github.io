@@ -1,50 +1,38 @@
   <!-- Page Content -->
-  <script type="text/javascript" charset="utf-8">
-    var isinit = $("#page").pagination();
-    //判断是否初始化
-    if (isinit) {
-      $('.table').remove();
-      $("#page").pagination('setPageIndex', 0);
-      $("#page").pagination('setPageSize', 10);
-      $("#page").pagination('render', 10);
-    }
+<div id="page-content-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 col-sm-12">
+                <div class="page-header" id="archives">
+                    <h3 class="d-inline">搜索</h3>
+                    <input type="text" class="d-inline form-control ml-3 w-50" id="post-search" placeholder="搜索文章..." autocomplete="off">
+                </div>
+                <ul class="ant-timeline" id="archivelist">
+                  <!--<div id="eventLog"></div>-->
 
-    //站内搜索文章
-  </script>
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-8 col-sm-12">
-                        <div class="page-header" id="archives">
-                            <h3 class="d-inline">搜索</h3>
-                            <input type="text" class="d-inline form-control ml-3 w-50" id="post-search" placeholder="搜索文章..." autocomplete="off">
-                        </div>
-                        <ul class="ant-timeline" id="archivelist">
-                          <!--<div id="eventLog"></div>-->
+                    {% for post in site.posts %}
 
-                            {% for post in site.posts %}
-
-                            <li class="ant-timeline-item">
-                                <div class="ant-timeline-item-content">
-                                    <span class="text-primary">{{ post.date | date: "%Y-%m-%d" }} </span>
-                                    <div class="d-flex align-items-center post-title">
-                                        <a class="post-link h5 text-primary" href="{{site.url}}{{site.baseurl}}{{ post.url}}">{{ post.title }}</a>
-                                     </div>
-                                </div>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-sm-12">
-                        <div class="page-header" id="archives">
-                            <h4>待拓展模块</h4>
+                    <li class="ant-timeline-item">
+                        <div class="ant-timeline-item-content">
+                            <span class="text-primary">{{ post.date | date: "%Y-%m-%d" }} </span>
+                            <div class="d-flex align-items-center post-title">
+                                <a class="post-link h5 text-primary" href="{{site.url}}{{site.baseurl}}{{ post.url}}">{{ post.title }}</a>
+                             </div>
                         </div>
-                        <p>待拓展模块</p>
-                        <div class="page-header" id="archives">
-                            <h4>待拓展模块</h4>
-                        </div>
-                        <p>待拓展模块</p>
-                    </div>
+                    </li>
+                    {% endfor %}
+                </ul>
             </div>
-        </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="page-header" id="archives">
+                    <h4>待拓展模块</h4>
+                </div>
+                <p>待拓展模块</p>
+                <div class="page-header" id="archives">
+                    <h4>待拓展模块</h4>
+                </div>
+                <p>待拓展模块</p>
+            </div>
+    </div>
+</div>
         <!-- /#page-content-wrapper -->

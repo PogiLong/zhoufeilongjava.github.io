@@ -1,8 +1,9 @@
 ---
 layout: post
-title: github pages + jekyll 搭建博客
-permalink: /zhou/2.html
+title: 分页测试
+permalink: /zhou/12.html
 ---
+
 
 test
 {% highlight ruby %}
