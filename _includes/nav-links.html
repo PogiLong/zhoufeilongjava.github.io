@@ -19,14 +19,4 @@
             <span class="text-warning pull-right">{{ site.categories.size}}</span>
         </a>
     </li>
-
-    {{% for categories in site.categories %}}
-    <li id="category">
-        <a href="{{site.url}}{{site.baseurl}}/index.html#archives">
-            <i class="fa fa-file-archive-o" aria-hidden="false"></i>
-            <span class="text-warning pull-right">{{categories}}</span>
-        </a>
-    </li>
-    {{endfor}}
-
 </ul>

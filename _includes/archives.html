@@ -7,6 +7,7 @@
                     <h3 class="d-inline">搜索</h3>
                     <input type="text" class="d-inline form-control ml-3 w-50" id="post-search" placeholder="搜索文章..." autocomplete="off">
                 </div>
+              <div style="width:500px; height: 400px;">
                 <ul class="ant-timeline" id="archivelist">
 
                     {% assign limit = 10 %}
@@ -24,7 +25,7 @@
                     {% capture index %}{{ index | plus:1 }}{% endcapture %}
                   {% endfor %}
 
-                  {% for post in site.posts offset:12 %}
+                  {% for post in site.posts offset:10 %}
                   <li class="ant-timeline-item" id="{{index}}" style="display: none">
                     <div class="ant-timeline-item-content">
                       <span class="text-primary">{{ post.date | date: "%Y-%m-%d" }} </span>
@@ -36,18 +37,19 @@
                   {% capture index %}{{ index | plus:1 }}{% endcapture %}
                   {% endfor %}
                 </ul>
-
+              </div>
                 <div class="pagination">
                     <ul class="pagination">
-                        <li><a href="#">&laquo;</a></li>
+                        <li><a href="javascript:void(0);">&laquo;</a></li>
                         {% for i in (1..total) %}
                         <!--<li class="active"><a href="#">1</a></li>-->
                         <!--<li class="disabled"><a href="#">2</a></li>-->
                         <li><a href="javascript:void(0);" class="active" id="{{i}}" onclick="fenye(id)">{{i}}</a></li>
                         {% endfor %}
-                        <li><a href="#">&raquo;</a></li>
+                        <li><a href="javascript:void(0);">&raquo;</a></li>
                     </ul>
                 </div>
+
 
               <script type="text/javascript">
                 var index = 1;
