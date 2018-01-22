@@ -1,7 +1,6 @@
 ---
 layout: post
-title: 分页测试
-permalink: /zhou/8.html
+title: 分页测试6
 categories: test6
 ---
 

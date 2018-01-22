@@ -8,20 +8,67 @@
                     <input type="text" class="d-inline form-control ml-3 w-50" id="post-search" placeholder="搜索文章..." autocomplete="off">
                 </div>
                 <ul class="ant-timeline" id="archivelist">
-                  <!--<div id="eventLog"></div>-->
 
-                    {% for post in site.posts %}
+                    {% assign limit = 10 %}
+                    {% assign index = 1 %}
+                    {% assign total = paginator.total_pages %}
+                    {% for post in site.posts limit:limit %}
+                          <li class="ant-timeline-item" id="{{index}}" style="display: block">
+                              <div class="ant-timeline-item-content">
+                                  <span class="text-primary">{{ post.date | date: "%Y-%m-%d" }} </span>
+                                  <div class="d-flex align-items-center post-title">
+                                      <a class="post-link h5 text-primary" href="{{site.url}}{{site.baseurl}}{{ post.url}}">{{ post.title }}</a>
+                                  </div>
+                              </div>
+                          </li>
+                    {% capture index %}{{ index | plus:1 }}{% endcapture %}
+                  {% endfor %}
 
-                    <li class="ant-timeline-item">
-                        <div class="ant-timeline-item-content">
-                            <span class="text-primary">{{ post.date | date: "%Y-%m-%d" }} </span>
-                            <div class="d-flex align-items-center post-title">
-                                <a class="post-link h5 text-primary" href="{{site.url}}{{site.baseurl}}{{ post.url}}">{{ post.title }}</a>
-                             </div>
-                        </div>
-                    </li>
-                    {% endfor %}
+                  {% for post in site.posts offset:12 %}
+                  <li class="ant-timeline-item" id="{{index}}" style="display: none">
+                    <div class="ant-timeline-item-content">
+                      <span class="text-primary">{{ post.date | date: "%Y-%m-%d" }} </span>
+                      <div class="d-flex align-items-center post-title">
+                        <a class="post-link h5 text-primary" href="{{site.url}}{{site.baseurl}}{{ post.url}}">{{ post.title }}</a>
+                      </div>
+                    </div>
+                  </li>
+                  {% capture index %}{{ index | plus:1 }}{% endcapture %}
+                  {% endfor %}
                 </ul>
+
+                <div class="pagination">
+                    <ul class="pagination">
+                        <li><a href="#">&laquo;</a></li>
+                        {% for i in (1..total) %}
+                        <!--<li class="active"><a href="#">1</a></li>-->
+                        <!--<li class="disabled"><a href="#">2</a></li>-->
+                        <li><a href="javascript:void(0);" class="active" id="{{i}}" onclick="fenye(id)">{{i}}</a></li>
+                        {% endfor %}
+                        <li><a href="#">&raquo;</a></li>
+                    </ul>
+                </div>
+
+              <script type="text/javascript">
+                var index = 1;
+                var limit = 10;
+                function fenye(id){
+                  console.log('index; ' + index);
+                  var currentIndex = 10 * (id - 1);
+                  $('ul#archivelist li').each(function(index, el) {
+                    $(el).removeClass('hidden').hide(400);
+                  });
+
+                  $('.ant-timeline-item').each(function () {
+                      if (this.id > currentIndex && this.id <= limit + currentIndex) {
+                        $(this).removeClass('hidden').show(400);
+                      }
+                  });
+
+                  index = id;
+                }
+              </script>
+
             </div>
             <div class="col-md-4 col-sm-12">
                 <div class="page-header" id="archives">

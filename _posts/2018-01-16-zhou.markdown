@@ -1,7 +1,6 @@
 ---
 layout: post
 title: github pages + jekyll 搭建博客
-permalink: /zhou/2.html
 category: github
 ---
 静态网站.
