@@ -72,7 +72,6 @@ function fenye(id){
 
     var currentLi = [];
     if (currentIndex + 10 > searchLi.length) {
-      //TODO  searchLi中选取,非剪切
       currentLi = searchLi.slice(currentIndex);
     } else {
       currentLi = searchLi.slice(currentIndex, currentIndex + 10);
