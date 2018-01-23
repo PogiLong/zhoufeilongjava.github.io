@@ -44,32 +44,11 @@
                         {% for i in (1..total) %}
                         <!--<li class="active"><a href="#">1</a></li>-->
                         <!--<li class="disabled"><a href="#">2</a></li>-->
-                        <li><a href="javascript:void(0);" class="active" id="{{i}}" onclick="fenye(id)">{{i}}</a></li>
+                        <li><a href="javascript:void(0);" id="{{i}}" onclick="fenye(id)">{{i}}</a></li>
                         {% endfor %}
                         <li><a href="javascript:void(0);">&raquo;</a></li>
                     </ul>
                 </div>
-
-
-              <script type="text/javascript">
-                var index = 1;
-                var limit = 10;
-                function fenye(id){
-                  console.log('index; ' + index);
-                  var currentIndex = 10 * (id - 1);
-                  $('ul#archivelist li').each(function(index, el) {
-                    $(el).removeClass('hidden').hide(400);
-                  });
-
-                  $('.ant-timeline-item').each(function () {
-                      if (this.id > currentIndex && this.id <= limit + currentIndex) {
-                        $(this).removeClass('hidden').show(400);
-                      }
-                  });
-
-                  index = id;
-                }
-              </script>
 
             </div>
             <div class="col-md-4 col-sm-12">
