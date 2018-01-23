@@ -4,6 +4,8 @@
 	<p class="text-white text-center" >blog</p>
 	<!--<p class="text-white text-center" >Github: <a href="https://github.com/szhielelp/JekyllTheme-ProjectGaia">Project Gaia</a></p>-->
 	<p class="lead">
-		<a class="btn btn-secondary" href="{{site.url}}{{site.baseurl}}/test11/2018/01/21/paginate.html" role="button">What's New?</a>
+		{% for post in site.posts limit:1 %}
+			<a class="btn btn-secondary" href="{{site.url}}{{site.baseurl}}{{ post.url}}" role="button">What's New?</a>
+		{% endfor %}
 	</p>
 </div>
