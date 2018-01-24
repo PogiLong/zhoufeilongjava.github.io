@@ -1,7 +1,7 @@
 ---
 layout: post
 title: gradle build 问题
-categories: github
+categories: gradle
 tags: [gradle,idea]
 ---
 
