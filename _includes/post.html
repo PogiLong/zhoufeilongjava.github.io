@@ -20,13 +20,24 @@
                 </div>
                 {{ page.content | markdownify }}
 
-                <!-- don't delete this div, this is marked as the end position of collapse plugin  -->
-                <!--<div id="content-end"></div>-->
-                <!--<div class="page-header">-->
-                   <!--<span>Comment Box</span>-->
-               <!--</div>-->
-                <!--<div>(update the code to your comment plugin in comment-full.html)</div>-->
+                <div id="content-end"></div>
+                <div class="page-header">
+                   <span>评论</span>
+               </div>
+              <div id="disqus_thread"></div>
             </div>
+
+
+          <script>
+            (function() {
+              var d = document, s = d.createElement('script');
+              s.src = 'https://zfl.disqus.com/embed.js';
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+            })();
+          </script>
+
+          <script id="dsq-count-scr" src="https://zfl.disqus.com/count.js" async></script>
 
         </div>
     </div>
