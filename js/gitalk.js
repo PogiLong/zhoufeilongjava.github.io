@@ -1,6 +1,6 @@
 const gitalk = new Gitalk({
   clientID: '4d1bfc260f0d92c3da77',
-  clientSecret: 'f9355ed2145ccca9d1803121a0773ab71097460d',
+  clientSecret: 'e8cf2b04f77c50702f9fa2a399440f91d788a02b',
   repo: 'blogTalk',
   owner: 'zhoufeilongjava',
   admin: ['zhoufeilongjava'],
