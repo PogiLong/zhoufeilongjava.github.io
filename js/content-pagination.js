@@ -2,7 +2,7 @@
   function initSearchBar(){
     $('input#post-search').on('change', function(event) {
       keyword = $('input#post-search').val();
-      if (keyword.length==0) {
+      if (keyword.length === 0) {
         //显示所有分页标签
         searchPage(total);
         //调整回搜索前的那页
@@ -13,7 +13,7 @@
         $.when(
             lis.each(function(index, el) {
               var postTitle = $(el).find('a.post-link').text().toLowerCase();
-              if (postTitle.indexOf(keyword.toLowerCase())==-1){
+              if (postTitle.indexOf(keyword.toLowerCase()) === -1){
                 $(el).hide(400);
               }
               else {
@@ -57,7 +57,7 @@ function fenye(id){
   //全部文章分页
   var isSearch = false;
   $('.ant-timeline-item').each(function () {
-    if (keyword.length == 0) {
+    if (keyword.length === 0) {
       if (this.id > currentIndex && this.id <= limit + currentIndex) {
         $(this).removeClass('hidden').show(400);
       }
@@ -81,7 +81,7 @@ function fenye(id){
     lis.each(function (index, el) {
 
       for (i in currentLi) {
-        if (currentLi[i] == el.id) {
+        if (currentLi[i] === el.id) {
           $(el).removeClass('hidden').show(400);
         }
       }
@@ -100,4 +100,11 @@ function searchPage(page) {
       $(el).removeClass('hidden').show();
     }
   });
+}
+
+function getTotal() {
+  return total;
+}
+
+function listenerTotal() {
 }

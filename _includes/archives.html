@@ -40,13 +40,11 @@
               </div>
                 <div class="pagination">
                     <ul class="pagination">
-                        <li><a href="javascript:void(0);">&laquo;</a></li>
+                        <li><a href="javascript:void(0);" onclick="fenye(1)">&laquo;</a></li>
                         {% for i in (1..total) %}
-                        <!--<li class="active"><a href="#">1</a></li>-->
-                        <!--<li class="disabled"><a href="#">2</a></li>-->
                         <li><a href="javascript:void(0);" id="{{i}}" onclick="fenye(id)">{{i}}</a></li>
                         {% endfor %}
-                        <li><a href="javascript:void(0);">&raquo;</a></li>
+                        <li><a href="javascript:void(0);" onclick="fenye(getTotal())">&raquo;</a></li>
                     </ul>
                 </div>
 
