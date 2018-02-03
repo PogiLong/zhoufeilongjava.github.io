@@ -20,6 +20,9 @@
   <link href="{{site.url}}{{site.baseurl}}/css/toc.css" rel='stylesheet' type="text/css"/>
   <link href="{{site.url}}{{site.baseurl}}/css/lightbox.min.css" rel='stylesheet' type="text/css"/>
 
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
 </head>
 <body>
 
@@ -54,6 +57,20 @@
 <script src="{{site.url}}{{site.baseurl}}/js/toc.js" type="text/javascript"></script>
 <script src="{{site.url}}{{site.baseurl}}/js/lightbox.min.js" type="text/javascript"></script>
 <script src="{{site.url}}{{site.baseurl}}/js/categories.js"></script>
+
+<script type="text/javascript">
+  const gitalk = new Gitalk({
+    clientID: '4d1bfc260f0d92c3da77',
+    clientSecret: 'e8cf2b04f77c50702f9fa2a399440f91d788a02b',
+    repo: 'zhoufeilongjava.github.io',
+    owner: 'zhoufeilongjava',
+    admin: ['zhoufeilongjava'],
+    // facebook-like distraction free mode
+    distractionFreeMode: false
+  });
+
+  gitalk.render('gitalk-container');
+</script>
 
 </body>
 </html>
