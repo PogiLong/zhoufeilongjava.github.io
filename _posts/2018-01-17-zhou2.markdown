@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 分页测试1
-categories: test
+categories: test2
 ---
 
 
