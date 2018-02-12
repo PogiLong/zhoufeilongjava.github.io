@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 分页测试3
-categories: test3
+categories: test
 ---
 
 
