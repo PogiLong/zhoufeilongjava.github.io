@@ -44,19 +44,19 @@ while (buffer.maxWritableBytes() >= 4) {
 BEFORE discardReadBytes()
 
 
-+-------------------+------------------+------------------+
-| discardable bytes |  readable bytes  |  writable bytes  |
-+-------------------+------------------+------------------+
-|                   |                  |                  |
++-------------------+------------------+------------------+<br>
+| discardable bytes |  readable bytes  |  writable bytes  |<br>
++-------------------+------------------+------------------+<br>
+|                   |                  |                  |<br>
 0      <=      readerIndex   <=   writerIndex    <=    capacity
 
 
 AFTER discardReadBytes()
  
-+------------------+--------------------------------------+
-|  readable bytes  |    writable bytes (got more space)   |
-+------------------+--------------------------------------+
-|                  |                                      |
++------------------+--------------------------------------+<br>
+|  readable bytes  |    writable bytes (got more space)   |<br>
++------------------+--------------------------------------+<br>
+|                  |                                      |<br>
 readerIndex (0) <= writerIndex (decreased)        <=        capacity
 
 清除之后可读字节区的下标readerIndex置零,可读字节下标writerIndex - 丢弃字节区长度.
@@ -66,19 +66,19 @@ readerIndex (0) <= writerIndex (decreased)        <=        capacity
 清除缓冲区
 
  BEFORE clear()
-+-------------------+------------------+------------------+
-| discardable bytes |  readable bytes  |  writable bytes  |
-+-------------------+------------------+------------------+
-|                   |                  |                  |
++-------------------+------------------+------------------+<br>
+| discardable bytes |  readable bytes  |  writable bytes  |<br>
++-------------------+------------------+------------------+<br>
+|                   |                  |                  |<br>
 0      <=      readerIndex   <=   writerIndex    <=    capacity
  
  
    AFTER clear()
  
-+---------------------------------------------------------+
-|             writable bytes (got more space)             |
-+---------------------------------------------------------+
-|                                                         |
++---------------------------------------------------------+<br>
+|             writable bytes (got more space)             |<br>
++---------------------------------------------------------+<br>
+|                                                         |<br>
 0 = readerIndex = writerIndex            <=            capacity
 
 
