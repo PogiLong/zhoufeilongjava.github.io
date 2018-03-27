@@ -1,5 +1,6 @@
 ---
 layout: post
+title: netty:ByteBuf结构
 comments: true
 categories: java
 ---
