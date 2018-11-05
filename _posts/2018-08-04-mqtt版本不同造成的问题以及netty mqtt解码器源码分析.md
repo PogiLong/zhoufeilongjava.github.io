@@ -19,3 +19,17 @@ categories: technology
 ![mqtt3.1.1](https://github.com/zhoufeilongjava/markdownPictures/blob/master/github/mqtt/mqtt311.png)
 
 服务端用的是moquette,使用的版本为v3.1.0
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
