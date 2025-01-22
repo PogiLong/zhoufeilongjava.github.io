@@ -91,4 +91,4 @@ org.springframework.cloud.config.server.encryption.EncryptionController
     }
     
     
-github上对应的bug：https://github.com/spring-cloud/spring-cloud-config/issues/1548
+github上对应的bug ：https://github.com/spring-cloud/spring-cloud-config/issues/1548
